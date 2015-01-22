@@ -1,0 +1,18 @@
+{
+	"total_rows": 1,
+	"offset": 0,
+	"rows": [{
+		"id": "2f44a37787add20a179fb7c95200133b",
+		"key": "j.doe@example.com",
+		"value": null,
+		"doc": {
+			"_id": "2f44a37787add20a179fb7c95200133b",
+			"_rev": "1-90e22dc1e0826736180194965ed74397",
+			"password": "$2a$10$yU5Fa4GHh3yQ9LoXMv5rteymifq8O8hbmyhmOWN1JslWUDQ6XroHy",
+			"created": 1417957535556,
+			"roles": ["user", "admin"],
+			"email": "J.Doe@example.com",
+			"last_updated": 1421164268466
+		}
+	}]
+}

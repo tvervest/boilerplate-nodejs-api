@@ -1,0 +1,45 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+cache:
+  apt: true
+  directories:
+    - node_modules
+
+services:
+  - couchdb
+  - redis-server
+
+# set up your test database before running the script
+before_script:
+  - # curl -X PUT localhost:5984/my-api-name_
+
+install:
+  - npm i -g node-gyp
+  - node-gyp clean
+  - npm install
+
+env:
+  global:
+    - DATABASE_URL:http://localhost:5984
+    - redis=http://localhost:6379
+
+before_deploy: "git fetch --unshallow"
+
+#deploy:
+#  provider: cloudcontrol
+#  email: 
+#  password:
+#    secure: 
+#  deployment: 
+#  on:
+#    tags: true
+#    repo: 
+#    branch: 
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
